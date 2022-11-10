@@ -1,16 +1,17 @@
 import { List } from "phosphor-react";
 import React from "react";
 import { MenuButton } from "./Menu.styled";
+import { MenuProps } from "./types";
 
-type MenuProps = {
-  menuText?: boolean;
-};
-
-export const Menu: React.FC<MenuProps> = ({ menuText = true }) => {
+export const Menu: React.FC<MenuProps> = ({
+  menuText = true,
+  color = "white",
+  children,
+}) => {
   return (
     <MenuButton>
-      <List size={32} color="#fff0f0" />
-      {menuText ? <span>Menu</span> : null}
+      <List size={32} color={color} />
+      {children}
     </MenuButton>
   );
 };
