@@ -51,7 +51,7 @@ export const Signin: React.FC = () => {
               </PerfilBox>
               <ButtonsBox>
                 <span>Login to a different account</span>
-                <Button buttonType="primary">
+                <Button to="/new-ticket" buttonType="primary">
                   Login
                   <CaretRight size={16} color="#fff0f0" weight="bold" />
                 </Button>
